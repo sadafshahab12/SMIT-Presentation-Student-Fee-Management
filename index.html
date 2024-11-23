@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Fee Management</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="/images/favicon.jpg" type="image/jpg">
+
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div
+          class="right-side dashboard bg-dark col-12 col-sm-12 col-md-4 col-lg-4"
+        >
+          <div class="p-3">
+            <h1 class="fs-3 text-center text-white pb-2">
+              Fee Management System
+            </h1>
+            <p class="text-center text-white pb-2">
+              Streamlining Fee Collection for Educational Institutions
+            </p>
+            <div
+              class="p-1 border border-white rounded-circle user-img mx-auto"
+            >
+              <img
+                src="/images/logo.png"
+                alt="logo"
+                class="w-100 h-100 rounded-circle object-fit-cover"
+              />
+            </div>
+          </div>
+          <div class="menu">
+            <ul class="receipt-links">
+              <li class="py-2 px-2 rounded cursor-pointer my-sm-3 my-1">
+                <a href="#generate" class="text-white text-decoration-none"
+                  >Generate Fee Receipt</a
+                >
+              </li>
+              <li class="py-2 px-2 rounded cursor-pointer my-sm-3 my-1">
+                <a href="#receipt-view" class="text-white text-decoration-none"
+                  >View Generated Receipts
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="left-side col-12 col-sm-12 col-md-8 col-lg-8 px-2 py-2"
+          id="generate"
+        >
+          <div class="container-lg student-fee-manage-head">
+            <div class="row">
+              <h1 class="pb-3 mb-3 border-bottom fs-3 text-center fw-bold">
+                Student Fee Management
+              </h1>
+            </div>
+          </div>
+          <div class="form">
+            <div class="sm-container container-lg gap-5">
+              <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label"
+                      >First Name:</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control shadow-none f-name"
+                      id="exampleFormControlInput1"
+                      placeholder="Enter First Name"
+                    />
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label"
+                      >Last Name:</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control shadow-none l-name"
+                      id="exampleFormControlInput1"
+                      placeholder="Enter Last Name"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="sm-container container-lg">
+              <div class="row flex">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                  <label for="form-label" class="form-label">Class:</label>
+                  <select
+                    class="form-select shadow-none stud-class"
+                    aria-label="Default select example"
+                  >
+                    <option>Select Class</option>
+                    <option value="1">I</option>
+                    <option value="2">II</option>
+                    <option value="3">III</option>
+                    <option value="4">IV</option>
+                    <option value="5">V</option>
+                    <option value="6">VI</option>
+                    <option value="7">VII</option>
+                    <option value="8">VIII</option>
+                    <option value="9">IX</option>
+                    <option value="10">X</option>
+                  </select>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                  <div class="mb-3 m-0">
+                    <label for="exampleFormControlInput1" class="form-label"
+                      >Student GR No:</label
+                    >
+                    <input
+                      type="number"
+                      class="form-control shadow-none gr-num"
+                      id="exampleFormControlInput1"
+                      placeholder="Enter Student GR No"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="sm-container container-lg">
+              <h1 class="fs-5">Select Month</h1>
+              <div class="row gap-1">
+                <div class="col-12 col-sm-4 col-md-4 col-lg-2">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input shadow-none month"
+                      type="checkbox"
+                      value="January"
+                      id="flexCheckChecked"
+                    />
+                    <label class="form-check-label" for="flexCheckChecked">
+                      January
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-4 col-md-4 col-lg-2">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input shadow-none month"
+                      type="checkbox"
+                      value="February"
+                      id="flexCheckChecked1"
+                    />
+                    <label class="form-check-label" for="flexCheckChecked1">
+                      February
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-4 col-md-4 col-lg-2">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input shadow-none month"
+                      type="checkbox"
+                      value="March"
+                      id="flexCheckChecked2"
+                    />
+                    <label class="form-check-label" for="flexCheckChecked2">
+                      March
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-4 col-md-4 col-lg-2">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input shadow-none month"
+                      type="checkbox"
+                      value="April"
+                      id="flexCheckChecked3"
+                    />
+                    <label class="form-check-label" for="flexCheckChecked3">
+                      April
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-4 col-md-4 col-lg-2">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input shadow-none month"
+                      type="checkbox"
+                      value="May"
+                      id="flexCheckChecked4"
+                    />
+                    <label class="form-check-label" for="flexCheckChecked4">
+                      May
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-4 col-md-4 col-lg-2">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input shadow-none month"
+                      type="checkbox"
+                      value="June"
+                      id="flexCheckChecked5"
+                    />
+                    <label class="form-check-label" for="flexCheckChecked5">
+                      June
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-4 col-md-4 col-lg-2">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input shadow-none month"
+                      type="checkbox"
+                      value="July"
+                      id="flexCheckChecked6"
+                    />
+                    <label class="form-check-label" for="flexCheckChecked6">
+                      July
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-4 col-md-4 col-lg-2">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input shadow-none month"
+                      type="checkbox"
+                      value="August"
+                      id="flexCheckChecked7"
+                    />
+                    <label class="form-check-label" for="flexCheckChecked7">
+                      August
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-4 col-md-4 col-lg-2">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input shadow-none month"
+                      type="checkbox"
+                      value="September"
+                      id="flexCheckChecked8"
+                    />
+                    <label class="form-check-label" for="flexCheckChecked8">
+                      September
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-4 col-md-4 col-lg-2">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input shadow-none month"
+                      type="checkbox"
+                      value="October"
+                      id="flexCheckChecked9"
+                    />
+                    <label class="form-check-label" for="flexCheckChecked9">
+                      October
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-4 col-md-4 col-lg-2">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input shadow-none month"
+                      type="checkbox"
+                      value="November"
+                      id="flexCheckChecked10"
+                    />
+                    <label class="form-check-label" for="flexCheckChecked10">
+                      November
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-4 col-md-4 col-lg-2">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input shadow-none month"
+                      type="checkbox"
+                      value="December"
+                      id="flexCheckChecked11"
+                    />
+                    <label class="form-check-label" for="flexCheckChecked11">
+                      December
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="sm-container container-lg">
+              <div class="row py-3">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                  <label for="form-label" class="form-label"
+                    >Select Amount:</label
+                  >
+                  <select
+                    class="form-select shadow-none amount"
+                    aria-label="Default select example"
+                  >
+                    <option>Select Amount</option>
+                    <option value="500">500</option>
+                    <option value="600">600</option>
+                    <option value="700">700</option>
+                    <option value="800">800</option>
+                    <option value="900">900</option>
+                    <option value="1000">1000</option>
+                    <option value="1500">1500</option>
+                    <option value="2000">2000</option>
+                    <option value="2500">2500</option>
+                    <option value="3000">3000</option>
+                    <option value="3500">3500</option>
+                    <option value="4000">4000</option>
+                  </select>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                  <label class="form-label" for="feedate">
+                    Fee Submission Date
+                  </label>
+                  <div class="input">
+                    <input
+                      class="form-control shadow-none"
+                      type="date"
+                      id="feedate"
+                    />
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                  <label class="form-label" for="feefine">
+                    Fee Fine (After Due Date)
+                  </label>
+                  <div class="input">
+                    <input
+                      class="form-control shadow-none"
+                      type="text"
+                      id="feefine"
+                      value="0"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="sm-container container-lg">
+              <h1 class="fs-5">Select Charges</h1>
+              <div class="row">
+                <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input shadow-none"
+                      type="checkbox"
+                      id="monthly-fee"
+                      checked
+                    />
+                    <label class="form-check-label" for="monthly-fee">
+                      Monthly Fee
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input shadow-none"
+                      type="checkbox"
+                      id="annual-charge"
+                    />
+                    <label class="form-check-label" for="annual-charge">
+                      Annual Charge
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input shadow-none"
+                      type="checkbox"
+                      id="lab-charge"
+                    />
+                    <label class="form-check-label" for="lab-charge">
+                      Lab Charge
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input shadow-none"
+                      type="checkbox"
+                      id="exam-fee"
+                    />
+                    <label class="form-check-label" for="exam-fee">
+                      Exam Fee
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="sm-container container-lg pt-3">
+              <a class="btn btn-success generate-btn" href="#" role="button"
+                >Generate Receipt</a
+              >
+            </div>
+          </div>
+
+          <!-- receipt  -->
+          <div
+            class="container student-receipt px-sm-5 px-1 mx-auto my-3"
+            id="receipt-view"
+          >
+            <div class="py-2">
+              <h1 class="fs-4 fw-bold">Student Fee Receipt</h1>
+            </div>
+            <div class="receipt">
+              <div class="row justify-content-between">
+                <div class="d-flex gap-3 col-12 col-sm-6 col-md-6 col-lg-6">
+                  <strong>Student Id :</strong>
+                  <p class="std-id text-decoration-underline"></p>
+                </div>
+                <div class="d-flex gap-3 col-12 col-sm-6 col-md-6 col-lg-6">
+                  <strong>Student GR No :</strong>
+                  <p class="std-gr text-decoration-underline"></p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="d-flex gap-3 col-12 col-sm-6 col-md-6 col-lg-6">
+                  <strong>Student Name :</strong>
+                  <p class="std-name text-decoration-underline"></p>
+                </div>
+                <div class="d-flex gap-3 col-12 col-sm-6 col-md-6 col-lg-6">
+                  <strong>Father Name :</strong>
+                  <p class="std-fname text-decoration-underline"></p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="d-flex gap-3 col-12 col-sm-6 col-md-6 col-lg-6">
+                  <strong>Class :</strong>
+                  <p class="std-class text-decoration-underline"></p>
+                </div>
+                <div class="d-flex gap-3 col-12 col-sm-6 col-md-6 col-lg-6">
+                  <strong>Date :</strong>
+                  <p class="fee-submit-date text-decoration-underline"></p>
+                </div>
+                <div class="d-flex gap-3 col-12 col-sm-6 col-md-6 col-lg-6">
+                  <strong>Month :</strong>
+                  <p class="fee-month text-decoration-underline"></p>
+                </div>
+              </div>
+
+              <div class="table">
+                <table class="border border-1 border-dark">
+                  <thead class="text-center">
+                    <th class="border border-1 border-dark fw-bold p-2">
+                      S.No
+                    </th>
+                    <th class="border border-1 border-dark fw-bold p-2">
+                      Particular
+                    </th>
+                    <th class="border border-1 border-dark fw-bold p-2">
+                      Total
+                    </th>
+                  </thead>
+
+                  <tr class="text-center">
+                    <td class="border border-1 border-dark p-2">1</td>
+                    <td class="border border-1 border-dark p-2">Monthly Fee</td>
+                    <td
+                      class="border border-1 border-dark p-2 monthly-fee-amount"
+                    >
+                      0
+                    </td>
+                  </tr>
+                  <tr class="text-center">
+                    <td class="border border-1 border-dark p-2">2</td>
+                    <td class="border border-1 border-dark p-2">
+                      Annual Charge
+                    </td>
+                    <td
+                      class="border border-1 border-dark p-2 annual-fee-amount"
+                    >
+                      0
+                    </td>
+                  </tr>
+                  <tr class="text-center">
+                    <td class="border border-1 border-dark p-2">3</td>
+                    <td class="border border-1 border-dark p-2">Lab Charge</td>
+                    <td class="border border-1 border-dark p-2 lab-fee-amount">
+                      0
+                    </td>
+                  </tr>
+
+                  <tr class="text-center">
+                    <td class="border border-1 border-dark p-2">4</td>
+                    <td class="border border-1 border-dark p-2">Exam Fee</td>
+                    <td class="border border-1 border-dark p-2 exam-fee-amount">
+                      0
+                    </td>
+                  </tr>
+                  <tr class="text-center">
+                    <td class="border border-1 border-dark p-2">5</td>
+                    <td class="border border-1 border-dark p-2">Fee Fine</td>
+                    <td class="border border-1 border-dark p-2 fine-fee-amount">
+                      0
+                    </td>
+                  </tr>
+                  <tr class="text-center">
+                    <td
+                      class="border border-1 border-dark p-2 fw-bold"
+                      colspan="2"
+                    >
+                      Total Amount
+                    </td>
+                    <td class="border border-1 border-dark p-2 total-amount">
+                      0
+                    </td>
+                  </tr>
+                </table>
+
+                <div class="signature pt-5 text-end">
+                  <p><strong>Cashier:</strong>_______________</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container ps-sm-5 ps-2 pb-3">
+            <a class="btn btn-success download-btn" role="button"
+              >Download Receipt</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="nav.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
